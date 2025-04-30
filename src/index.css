@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+/**
+        Namespace | Utility classes
+--color-*	        Color utilities like bg-red-500, text-sky-300, and many more
+--font-*	        Font family utilities like font-sans
+--text-*	        Font size utilities like text-xl
+--font-weight-*	    Font weight utilities like font-bold
+--tracking-*	    Letter spacing utilities like tracking-wide
+--leading-*	        Line height utilities like leading-tight
+--breakpoint-*	    Responsive breakpoint variants like sm:*
+--container-*	    Container query variants like @sm:* and size utilities like max-w-md
+--spacing-*	        Spacing and sizing utilities like px-4, max-h-16, and many more
+--radius-*	        Border radius utilities like rounded-sm
+--shadow-*	        Box shadow utilities like shadow-md
+--inset-shadow-*	Inset box shadow utilities like inset-shadow-xs
+--drop-shadow-*	    Drop shadow filter utilities like drop-shadow-md
+--blur-*	        Blur filter utilities like blur-md
+--perspective-*	    Perspective utilities like perspective-near
+--aspect-*	        Aspect ratio utilities like aspect-video
+--ease-*	        Transition timing function utilities like ease-out
+--animate-*	        Animation utilities like animate-spin
+*/
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme {
+
+    --color-primary: rgba();
+    --color-secondary: rgba();
+    --color-accent: rgba(132, 110, 150);
+
+    --color-text-primary: rgba(9, 8, 10);
+    --color-text-secondary: rgba(76, 74, 80);
+
+
+
+    --color-danger: rgba(224, 22, 0);
+    --color-warning: rgba(255, 174, 82);
+    --color-success: rgba(86, 191, 97);
+    --color-info: rgba(155, 134, 177);
+    --color-link: rgba(155, 134, 177);
+    --color-background: rgba(236, 233, 240);
+    --color-foreground: rgba(231, 220, 255);
+    --color-input: rgba(155, 134, 177);
+    --color-separator: rgba(155, 134, 177);
+    --color-hint: rgba(155, 134, 177);
+    --color-focus: rgba(155, 134, 177);
+
+
+    --color-primary-dark: rgba(48, 38, 59);
+    --color-secondary-dark: rgba(155, 134, 177);
+    --color-accent-dark: rgba(123, 110, 150);
+    --color-danger-dark: rgba(255, 99, 82);
+    --color-warning-dark: rgba(255, 205, 148);
+    --color-success-dark: rgba(126, 45, 73);
+    --color-info-dark: rgba(155, 134, 177);
+    --color-link-dark: rgba(155, 134, 177);
+    --color-background-dark: rgba(32, 29, 37);
+    --color-foreground-dark: rgba(155, 134, 177);
+    --color-input-dark: rgba(155, 134, 177);
+    --color-separator-dark: rgba(155, 134, 177);
+    --color-hint-dark: rgba(155, 134, 177);
+    --color-focus-dark: rgba(155, 134, 177);
+    --color-text-primary-dark: rgba(155, 134, 177);
+    --color-text-secondary-dark: rgba(155, 134, 177);
+}
+
+
+
+html {
+    @apply transition-all;
+
+    @variant has-dark {
+        @apply bg-zinc-900;
+
+    }
+
+    @variant not-has-dark {
+        @apply bg-zinc-50;
+    }
+}
